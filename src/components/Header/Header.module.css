@@ -3,10 +3,16 @@
     position: sticky;
     top: 0;
     z-index: 2;
+    padding: 1rem;
+    background-color: #edefee;
+}
+
+.header__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .nav__item {
@@ -16,6 +22,11 @@
 }
 
 @media(min-width: 767px) {
+    .header__wrapper nav {
+        flex-grow: 1;
+        margin-left: 5%;
+    }
+
     .nav__list {
         display: flex;
         align-items: center;

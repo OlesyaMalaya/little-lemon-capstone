@@ -7,20 +7,22 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div>
-        <img src={logo} alt="logo" />
+      <div className={styles.header__wrapper}>
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
+        <nav>
+          <ul className={styles.nav__list}>
+            {NAV_LINKS.map((navlink) => {
+              return (
+                <li key={navlink.link} className={styles.nav__item}>
+                  <NavLink to={navlink.link}>{navlink.name}</NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul className={styles.nav__list}>
-          {NAV_LINKS.map((navlink) => {
-            return (
-              <li key={navlink.link} className={styles.nav__item}>
-                <NavLink to={navlink.link}>{navlink.name}</NavLink>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
     </header>
   );
 };

@@ -12,6 +12,6 @@ export const NAV_LINKS = [
     { name: "About", link: "/about" },
     { name: "Menu", link: "/menu" },
     { name: "Reservation", link: "/reservation" },
-    { name: "Order Online", link: "/order" },
+    { name: "Order", link: "/order" },
     { name: "Login", link: "/login" },
 ];
