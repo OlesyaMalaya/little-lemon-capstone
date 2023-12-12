@@ -114,5 +114,9 @@ main {
 
 /* General styles */
 body {
-  font-family: "Karla", sans-serif;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  text-decoration: underline #f4ce14 2px;
 }

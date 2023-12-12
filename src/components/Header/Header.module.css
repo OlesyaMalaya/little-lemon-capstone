@@ -11,8 +11,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5%;
     max-width: 90%;
     margin: 0 auto;
+}
+
+.header__burger {
+    cursor: pointer;
+    z-index: 3;
 }
 
 .nav__item {
@@ -24,7 +30,6 @@
 @media(min-width: 767px) {
     .header__wrapper nav {
         flex-grow: 1;
-        margin-left: 5%;
     }
 
     .nav__list {
@@ -35,5 +40,9 @@
 
     .nav__item {
         padding: 0.5rem 0;
+    }
+
+    .header__burger {
+        display: none;
     }
 }
