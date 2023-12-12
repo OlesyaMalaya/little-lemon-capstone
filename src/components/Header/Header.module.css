@@ -27,6 +27,12 @@
     font-weight: 700;
 }
 
+.nav__item a.nav__link_current {
+    color: #333333;
+}
+
+/* Menu for big screens */
+
 @media(min-width: 767px) {
     .header__wrapper nav {
         flex-grow: 1;
@@ -45,4 +51,34 @@
     .header__burger {
         display: none;
     }
+}
+
+/* Animated burger menu for mobile screens */
+
+@media (max-width: 768px) {
+    .header__nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: #edefee;
+        transition: left 0.3s ease 0s;
+        display: flex;
+    }
+
+    .header__nav_visible {
+        left: 0;
+    }
+
+    .nav__list {
+        margin: auto;
+    }
+
+    .nav__item {
+        font-size: 3rem;
+        line-height: 6rem;
+        text-underline-offset: 0.5rem;
+    }
+
 }
