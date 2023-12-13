@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__wrapper}>
+      <div className={styles.footer__wrapper + " container"}>
         <section>
           <h5>Working hours</h5>
           <p>Mon. - Fr.: 12.00 - 22.00</p>

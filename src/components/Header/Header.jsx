@@ -1,4 +1,4 @@
-import { NAV_LINKS } from "../../constants/constants";
+import { NAV_LINKS } from "../../constants/routes";
 import { useState } from "react";
 import logo from "../../assets/Logo_horizontal.svg";
 import burger from "../../assets/icon_hamburger menu.svg";
@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <header className={styles.header}>
-      <div className={styles.header__wrapper}>
+      <div className={styles.header__wrapper + " container"}>
         <div>
           <img src={logo} alt="logo" />
         </div>

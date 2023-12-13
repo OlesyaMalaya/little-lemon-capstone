@@ -1,0 +1,43 @@
+.dishcard {
+    max-width: 30rem;
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dishcard:hover {
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, .5);
+    transform: translateY(-5px);
+    transition: all .3s;
+}
+
+.dishcard__content {
+    flex: 1 1 auto;
+}
+
+.dishcard__heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.dishcard__imgcontainer {
+    height: 30vh;
+}
+
+.dishcard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+
+}
+
+.dishcard__heading p {
+    color: #ee9972;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
