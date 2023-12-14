@@ -24,7 +24,7 @@ export const dishes = [
         price: 5.99,
         image: bruschetta,
         isSpecials: true,
-        category: "snack",
+        category: "dessert",
     },
     {
         id: 3,
@@ -33,6 +33,7 @@ export const dishes = [
         price: 7.99,
         image: lemonDessert,
         isSpecials: true,
+        category: "dessert",
     },
     {
         id: 4,
@@ -59,6 +60,7 @@ export const dishes = [
         price: 2.99,
         image: coffee,
         isSpecials: false,
+        category: "drink",
     },
     {
         id: 7,
@@ -67,6 +69,7 @@ export const dishes = [
         price: 2.99,
         image: tea,
         isSpecials: false,
+        category: "drink",
     },
     {
         id: 8,
@@ -75,7 +78,11 @@ export const dishes = [
         price: 1.99,
         image: lemonade,
         isSpecials: false,
+        category: "drink",
     },
 ];
 
 export const specials = dishes.filter((dish) => dish.isSpecials);
+export const mainDishes = dishes.filter((dish) => dish.category === "main");
+export const desserts = dishes.filter((dish) => dish.category === "dessert");
+export const drinks = dishes.filter((dish) => dish.category === "drink");

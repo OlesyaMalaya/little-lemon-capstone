@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <>
       <Hero hero={homePageHero} />
-      <section className="container flex section-container">
+      <section className="container flex content-container">
         <h3>This Week Specials!</h3>
         <CTA>
           <NavLink to={ROUTES.MENU}>Online Menu</NavLink>
