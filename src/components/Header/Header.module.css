@@ -80,3 +80,7 @@
     }
 
 }
+
+a[aria-current="page"] {
+    color: #333333;
+}

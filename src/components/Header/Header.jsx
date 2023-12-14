@@ -7,7 +7,6 @@ import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [activePage, setActivePage] = useState("Home");
   const [isMenuVisible, setMenuVisible] = useState(false);
   const toggleMenu = () => {
     setMenuVisible(() => !isMenuVisible);
@@ -33,17 +32,7 @@ const Header = () => {
                   className={styles.nav__item}
                   onClick={toggleMenu}
                 >
-                  <NavLink
-                    to={navlink.link}
-                    onClick={() => setActivePage(() => navlink.name)}
-                    className={
-                      activePage === navlink.name
-                        ? styles.nav__link_current
-                        : ""
-                    }
-                  >
-                    {navlink.name}
-                  </NavLink>
+                  <NavLink to={navlink.link}>{navlink.name}</NavLink>
                 </li>
               );
             })}
