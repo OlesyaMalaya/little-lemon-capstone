@@ -122,9 +122,43 @@ body {
   margin: 0 auto;
 }
 
+.section-container {
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Markazi", serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 4rem;
+  color: #f4ce14;
+}
+
+h2 {
+  font-size: 2.52rem;
+  color: #edefee;
+}
+
+h3 {
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 h4 {
   font-weight: 700;
   font-size: 1.125rem;
+  color: #333333;
 }
 
 a:hover {
@@ -137,6 +171,14 @@ a:hover {
   grid-auto-rows: 1fr;
   justify-content: space-between;
   align-items: center;
+}
+
+/* to display tiles in one column on small screens */
+@media (max-width: 440px) {
+  .tilesview {
+    display: block;
+  }
+
 }
 
 .tile {

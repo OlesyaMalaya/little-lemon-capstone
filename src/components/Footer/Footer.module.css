@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: start;
+    justify-content: space-between;
     gap: 1rem;
 }
 

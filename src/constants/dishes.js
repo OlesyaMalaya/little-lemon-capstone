@@ -6,6 +6,7 @@ import seabass from "../assets/seabass.png";
 import coffee from "../assets/coffee.png";
 import tea from "../assets/tea.png";
 import lemonade from "../assets/lemonade.png";
+
 export const dishes = [
     {
         id: 1,
@@ -75,4 +76,6 @@ export const dishes = [
         image: lemonade,
         isSpecials: false,
     },
-]
+];
+
+export const specials = dishes.filter((dish) => dish.isSpecials);

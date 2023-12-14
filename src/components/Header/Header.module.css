@@ -57,7 +57,7 @@
     .header__nav {
         position: absolute;
         top: 0;
-        left: -100%;
+        left: -150%;
         width: 100vw;
         height: 100vh;
         background-color: #edefee;
