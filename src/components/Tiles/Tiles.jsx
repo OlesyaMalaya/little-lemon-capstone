@@ -5,7 +5,11 @@ const Tiles = ({ tiles, type }) => {
     <ul className="tilesview container">
       {tiles.map((tile) => (
         <li key={tile.id} className="tile">
-          {type === "dish" ? <DishCard dish={tile} /> : <Testimonial />}
+          {type === "dish" ? (
+            <DishCard dish={tile} />
+          ) : (
+            <Testimonial testimonial={tile} />
+          )}
         </li>
       ))}
     </ul>

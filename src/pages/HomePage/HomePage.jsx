@@ -4,7 +4,7 @@ import plate from "../../assets/plate.png";
 import CTA from "../../components/CTA/CTA";
 import { NavLink } from "react-router-dom";
 import { specials } from "../../constants/dishes";
-import DishCard from "../../components/DishCard/DishCard";
+import Tiles from "../../components/Tiles/Tiles";
 
 const homePageHero = {
   heading: "Little Lemon",
@@ -21,19 +21,15 @@ const HomePage = () => {
   return (
     <>
       <Hero hero={homePageHero} />
-      <section className="container flex content-container">
-        <h3>This Week Specials!</h3>
-        <CTA>
-          <NavLink to={ROUTES.MENU}>Online Menu</NavLink>
-        </CTA>
-      </section>
-      <ul className="tilesview container">
-        {specials.map((dish) => (
-          <li key={dish.id} className="tile">
-            <DishCard dish={dish} />
-          </li>
-        ))}
-      </ul>
+      <article>
+        <section className="container flex content-container">
+          <h3>This Week Specials!</h3>
+          <CTA>
+            <NavLink to={ROUTES.MENU}>Online Menu</NavLink>
+          </CTA>
+        </section>
+        <Tiles tiles={specials} type="dish" />
+      </article>
     </>
   );
 };

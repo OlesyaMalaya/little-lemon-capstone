@@ -1,0 +1,21 @@
+.testimonial {
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial__photo {
+    max-width: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonial__star {
+    max-width: 2rem;
+}
