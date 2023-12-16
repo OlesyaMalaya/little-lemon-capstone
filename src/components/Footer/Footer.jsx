@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={styles.footer__wrapper + " container"}>
         <section>
           <h5>Working hours</h5>
-          <p>Mon. - Fr.: 12.00 - 22.00</p>
+          <p>Mon. - Fr.: 13.00 - 22.00</p>
           <p>Sat.: 13.00 - 23.00</p>
           <p>Sun.: 13.00 - 23.30</p>
         </section>

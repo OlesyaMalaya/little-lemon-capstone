@@ -1,7 +1,7 @@
 import Hero from "../../components/Hero/Hero";
 import { ROUTES } from "../../constants/routes";
 import {plate} from "../../constants/images";
-import CTA from "../../components/CTA/CTA";
+import Button from "../../components/Button/Button";
 import { NavLink } from "react-router-dom";
 import { specials } from "../../constants/dishes";
 import Tiles from "../../components/Tiles/Tiles";
@@ -24,9 +24,9 @@ const HomePage = () => {
       <article>
         <section className="container flex content-container">
           <h3>This Week Specials!</h3>
-          <CTA>
+          <Button>
             <NavLink to={ROUTES.MENU}>Online Menu</NavLink>
-          </CTA>
+          </Button>
         </section>
         <Tiles tiles={specials} type="dish" />
       </article>

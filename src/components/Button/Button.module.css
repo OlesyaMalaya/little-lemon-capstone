@@ -1,4 +1,4 @@
-.cta {
+.button {
     background-color: #f4ce14;
     border-radius: 1rem;
     cursor: pointer;
@@ -8,19 +8,19 @@
     margin: 1rem 0;
 }
 
-.cta:hover {
+.button:hover {
     background-color: #495e57;
     box-shadow: 3px 4px 8px rgba(0, 0, 0, .5);
     transform: translateY(-5px);
     transition: all .3s;
 }
 
-.cta a:hover {
+.button a:hover {
     text-decoration: none;
 }
 
-.cta button,
-.cta a {
+.button button,
+.button a {
     background-color: inherit;
     color: #333333;
     font-size: 1.375rem;

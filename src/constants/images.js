@@ -7,7 +7,6 @@ import lemonDessert from "../assets/lemon dessert.png";
 import pasta from "../assets/pasta.webp";
 import seabass from "../assets/seabass.webp";
 import coffee from "../assets/coffee.webp";
-
 import tea from "../assets/tea.webp";
 import lemonade from "../assets/lemonade.webp";
 import owners1 from "../assets/owners1.webp";

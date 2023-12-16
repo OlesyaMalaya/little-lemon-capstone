@@ -1,5 +1,5 @@
 import styles from "./DishCard.module.css";
-import CTA from "../CTA/CTA";
+import Button from "../Button/Button";
 
 const DishCard = ({ dish }) => {
   return (
@@ -13,9 +13,9 @@ const DishCard = ({ dish }) => {
           <p>${dish.price}</p>
         </section>
         <p>{dish.description}</p>
-        <CTA>
+        <Button>
           <button>Order a delivery</button>
-        </CTA>
+        </Button>
       </section>
     </article>
   );
