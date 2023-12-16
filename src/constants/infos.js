@@ -1,7 +1,6 @@
-import owners1 from "../assets/owners1.png";
-import owners2 from "../assets/owners2.png";
-import chef from "../assets/restaurant_chef.png";
-import restaurant from "../assets/restaurant.png"
+
+import { owners1, owners2, chef, restaurant } from "./images";
+
 export const infos = [
     {
         id: 1,

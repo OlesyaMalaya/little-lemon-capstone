@@ -2,7 +2,7 @@ import { ROUTES } from "../../constants/routes";
 import Hero from "../../components/Hero/Hero";
 import Tiles from "../../components/Tiles/Tiles";
 import Carousel from "../../components/Carousel/Carousel";
-import owners1 from "../../assets/owners1.png";
+import {owners1} from "../../constants/images";
 import { infos } from "../../constants/infos";
 import { testimonials } from "../../constants/testimonials";
 

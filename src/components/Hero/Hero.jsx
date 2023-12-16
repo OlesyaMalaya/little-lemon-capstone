@@ -12,9 +12,11 @@ const Hero = ({ hero }) => {
             <h2>{hero.subheading}</h2>
           </div>
           <p>{hero.description}</p>
-          <CTA>
-            <NavLink to={hero.cta_link}>{hero.cta_text}</NavLink>
-          </CTA>
+          {hero.cta_text ? (
+            <CTA>
+              <NavLink to={hero.cta_link}>{hero.cta_text}</NavLink>
+            </CTA>
+          ) : null}
         </section>
         <section className={styles.hero__image}>
           <img src={hero.image_src} alt={hero.image_text} />

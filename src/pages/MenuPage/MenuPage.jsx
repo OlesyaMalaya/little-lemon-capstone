@@ -6,7 +6,7 @@ import {
 } from "../../constants/dishes";
 import Tiles from "../../components/Tiles/Tiles";
 import { ROUTES } from "../../constants/routes";
-import restaurant from "../../assets/restaurant.png";
+import {restaurant} from "../../constants/images";
 import Hero from "../../components/Hero/Hero";
 
 const menuPageHero = {

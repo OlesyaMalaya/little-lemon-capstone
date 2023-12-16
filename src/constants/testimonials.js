@@ -1,6 +1,4 @@
-import eric from "../assets/Eric.png";
-import alice from "../assets/Alice.png";
-import jiovanni from "../assets/Jiovanni.png";
+import { eric, alice, jiovanni } from "./images"
 
 export const testimonials = [
     {

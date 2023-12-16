@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero/Hero";
 import { ROUTES } from "../../constants/routes";
-import plate from "../../assets/plate.png";
+import {plate} from "../../constants/images";
 import CTA from "../../components/CTA/CTA";
 import { NavLink } from "react-router-dom";
 import { specials } from "../../constants/dishes";

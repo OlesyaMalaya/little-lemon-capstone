@@ -1,11 +1,4 @@
-import greekSalad from "../assets/greek salad.png";
-import bruschetta from "../assets/bruschetta.png";
-import lemonDessert from "../assets/lemon dessert.png";
-import pasta from "../assets/pasta.png";
-import seabass from "../assets/seabass.png";
-import coffee from "../assets/coffee.png";
-import tea from "../assets/tea.png";
-import lemonade from "../assets/lemonade.png";
+import { greekSalad, bruschetta, lemonDessert, pasta, seabass, coffee, tea, lemonade } from "./images";
 
 export const dishes = [
     {

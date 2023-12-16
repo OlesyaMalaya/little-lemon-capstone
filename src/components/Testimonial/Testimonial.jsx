@@ -1,5 +1,6 @@
 import styles from "./Testimonial.module.css";
-import star from "../../assets/star.png";
+import { star } from "../../constants/images";
+
 const Testimonial = ({ testimonial }) => {
   return (
     <article className={styles.testimonial}>
