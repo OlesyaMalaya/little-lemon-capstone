@@ -15,6 +15,13 @@
     transition: all .3s;
 }
 
+.button:active {
+    background-color: #f4ce14;
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: all .3s;
+}
+
 .button a:hover {
     text-decoration: none;
 }
