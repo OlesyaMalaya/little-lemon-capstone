@@ -1,6 +1,4 @@
-import FindTableForm from "../../components/Forms/FindTableForm";
-import BookTableForm from "../../components/Forms/BookTableForm";
-import { useState } from "react";
+import BookingForm from "../../components/Forms/BookingForm";
 
 import { restaurant } from "../../constants/images";
 import Hero from "../../components/Hero/Hero";
@@ -15,17 +13,11 @@ const reservationPageHero = {
   image_text: "Restaurant view",
 };
 const ReservationPage = () => {
-  const [showBooking, setShowBooking] = useState(false);
   return (
     <>
       <Hero hero={reservationPageHero} />
       <section className="container content-container">
-        {showBooking ? (
-          <h3>Let's find a table!</h3>
-        ) : (
-          <h3>Please confirm your booking</h3>
-        )}
-        {showBooking ? <FindTableForm /> : <BookTableForm />}
+        <BookingForm />
       </section>
     </>
   );

@@ -1,8 +1,8 @@
 import { NAV_LINKS } from "../../constants/routes";
 import { useState } from "react";
 import logo from "../../assets/Logo_horizontal.svg";
-import burger from "../../assets/icon_hamburger menu.svg";
-import close from "../../assets/close.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -40,9 +40,9 @@ const Header = () => {
         </nav>
         <div className={styles.header__burger} onClick={toggleMenu}>
           {isMenuVisible ? (
-            <img src={close} alt="Close menu" />
+            <FontAwesomeIcon icon={faXmark} size="2xl" />
           ) : (
-            <img src={burger} alt="Menu" />
+            <FontAwesomeIcon icon={faBars} size="2xl" />
           )}
         </div>
       </div>

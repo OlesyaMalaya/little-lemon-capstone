@@ -31,14 +31,10 @@
 
 .footer__icon {
     max-height: 1.5rem;
-    background-color: #edefee;
+    color: #edefee;
     padding: 0.2rem;
-    border-radius: 30%;
 }
 
-.footer__icon:hover {
-    background-color: #f4ce14;
-}
 
 @media(min-width:600px) {
     .footer__wrapper {

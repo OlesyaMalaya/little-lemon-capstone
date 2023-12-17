@@ -1,13 +1,18 @@
 import styles from "./Footer.module.css";
 import footerLogo from "../../assets/footer-logo.png";
-import location from "../../assets/location.svg";
-import phone from "../../assets/phone.svg";
-import mail from "../../assets/mail.svg";
-import telegram from "../../assets/telegram.svg";
-import meta from "../../assets/meta.svg";
-import twitter from "../../assets/twitter.svg";
-import instagram from "../../assets/instagram.svg";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTelegram,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -23,9 +28,9 @@ const Footer = () => {
           <h5>Contact</h5>
           <div className={styles.footer__item}>
             <div>
-              <img
-                src={telegram}
-                alt="Telegram"
+              <FontAwesomeIcon
+                icon={faTelegram}
+                size="lg"
                 className={styles.footer__icon}
               />
             </div>
@@ -33,13 +38,21 @@ const Footer = () => {
           </div>
           <div className={styles.footer__item}>
             <div>
-              <img src={mail} alt="Email" className={styles.footer__icon} />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                size="lg"
+                className={styles.footer__icon}
+              />
             </div>
             <p>little_lemon@mail.com</p>
           </div>
           <div className={styles.footer__item}>
             <div>
-              <img src={phone} alt="Phone" className={styles.footer__icon} />
+              <FontAwesomeIcon
+                icon={faPhone}
+                size="lg"
+                className={styles.footer__icon}
+              />
             </div>
             <p>
               <Link to="tel:123456789">123456789</Link>
@@ -50,9 +63,9 @@ const Footer = () => {
           <h5>Location</h5>
           <div className={styles.footer__item}>
             <div>
-              <img
-                src={location}
-                alt="Location"
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                size="xl"
                 className={styles.footer__icon}
               />
             </div>
@@ -64,23 +77,27 @@ const Footer = () => {
           <div className={styles.footer__item}>
             <div>
               <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <img src={meta} alt="Meta" className={styles.footer__icon} />
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  size="xl"
+                  className={styles.footer__icon}
+                />
               </a>
             </div>
             <div>
               <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <img
-                  src={twitter}
-                  alt="Twitter"
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  size="xl"
                   className={styles.footer__icon}
                 />
               </a>
             </div>
             <div>
               <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <img
-                  src={instagram}
-                  alt="Instagram"
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="xl"
                   className={styles.footer__icon}
                 />
               </a>

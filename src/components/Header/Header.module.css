@@ -15,6 +15,7 @@
 }
 
 .header__burger {
+    color: #495E57;
     cursor: pointer;
     z-index: 3;
 }
