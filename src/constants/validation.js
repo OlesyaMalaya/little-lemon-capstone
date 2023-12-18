@@ -1,5 +1,21 @@
+const checkDate = (value) => {
+    const selectedDate = Date.parse(value.split("-").join(","));
+    const today = new Date()
+    const tomorrow = new Date(today)
+    const lastDate = new Date(today)
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    lastDate.setDate(lastDate.getDate() + 10);
+    const isAfterToday = selectedDate > tomorrow;
+    const isInNextTenDays = selectedDate < lastDate;
+    const errorMessage = isAfterToday ? "We take reservations only for the next 10 days" : "You can't reserve a table earlier than tomorrow";
+    return (isAfterToday && isInNextTenDays) || errorMessage;
+}
+
 export const validationConfig = {
-    date: { required: "Date is required" },
+    date: {
+        required: "Date is required",
+        validate: checkDate,
+    },
     time: {
         required: "Time is required",
         validate: (value) =>

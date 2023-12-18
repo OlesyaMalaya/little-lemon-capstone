@@ -30,9 +30,7 @@ const BookingForm = () => {
             <section>
               <label htmlFor="date">
                 Choose date
-                <span>
-                  <sup>*</sup>
-                </span>
+                <sup>*</sup>
               </label>
               <input
                 type="date"
@@ -44,9 +42,7 @@ const BookingForm = () => {
             <section>
               <label htmlFor="time">
                 Choose time
-                <span>
-                  <sup>*</sup>
-                </span>
+                <sup>*</sup>
               </label>
               <select id="time" {...register("time", validationConfig.time)}>
                 {availableTimes.length ? <option></option> : null}
@@ -63,9 +59,7 @@ const BookingForm = () => {
             <section>
               <label htmlFor="guests">
                 Number of guests
-                <span>
-                  <sup>*</sup>
-                </span>
+                <sup>*</sup>
               </label>
               <input
                 type="number"
@@ -86,9 +80,7 @@ const BookingForm = () => {
             <section>
               <label htmlFor="name">
                 Name
-                <span>
-                  <sup>*</sup>
-                </span>
+                <sup>*</sup>
               </label>
               <input
                 type="text"
@@ -101,9 +93,7 @@ const BookingForm = () => {
             <section>
               <label htmlFor="email">
                 Email
-                <span>
-                  <sup>*</sup>
-                </span>
+                <sup>*</sup>
               </label>
               <input
                 type="email"
