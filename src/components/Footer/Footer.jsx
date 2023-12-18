@@ -30,7 +30,7 @@ const Footer = () => {
             <div>
               <FontAwesomeIcon
                 icon={faTelegram}
-                size="lg"
+                size="xl"
                 className={styles.footer__icon}
               />
             </div>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </section>
         <section>
-          <h5>Connect</h5>
+          <h5>Social Media</h5>
           <div className={styles.footer__item}>
             <div>
               <a href="https://facebook.com" target="_blank" rel="noreferrer">

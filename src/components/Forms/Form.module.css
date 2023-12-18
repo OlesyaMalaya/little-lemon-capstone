@@ -15,7 +15,8 @@
     gap: 1rem;
 }
 
-.form__body span {
+.form__body span,
+.form__body p {
     color: #ff0000;
 }
 
