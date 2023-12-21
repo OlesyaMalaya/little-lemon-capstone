@@ -1,11 +1,9 @@
 const checkDate = (value) => {
     const selectedDate = Date.parse(value.split("-").join(","));
     const today = new Date()
-    const tomorrow = new Date(today)
-    const lastDate = new Date(today)
-    tomorrow.setDate(tomorrow.getDate() + 1);
+    const lastDate = new Date()
     lastDate.setDate(lastDate.getDate() + 10);
-    const isAfterToday = selectedDate > tomorrow;
+    const isAfterToday = selectedDate > today;
     const isInNextTenDays = selectedDate < lastDate;
     const errorMessage = isAfterToday ? "We take reservations only for the next 10 days" : "You can't reserve a table earlier than tomorrow";
     return (isAfterToday && isInNextTenDays) || errorMessage;

@@ -1,27 +1,23 @@
 import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
+import BookingSlots from "./BookingSlots";
 import styles from "./Form.module.css";
 import { validationConfig } from "../../constants/validation";
 
-const availableTimes = [
-  "13:00",
-  "14:00",
-  "15:00",
-  "16:00",
-  "17:00",
-  "18: 00",
-  "19-00",
-  "20:00",
-  "21:00",
-];
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+const initialDate = tomorrow.toISOString().slice(0, 10);
 
 const BookingForm = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
   const submit = (data) => console.log("data: ", data);
+  //react-hook-method to to detect value update
+  const watchDate = watch("date", initialDate);
   return (
     <>
       <article className={styles.form__container}>
@@ -39,23 +35,12 @@ const BookingForm = () => {
               />
               {errors.date ? <p>{errors.date.message}</p> : null}
             </section>
-            <section>
-              <label htmlFor="time">
-                Choose time
-                <sup>*</sup>
-              </label>
-              <select id="time" {...register("time", validationConfig.time)}>
-                {availableTimes.length ? <option></option> : null}
-                {availableTimes.length ? (
-                  availableTimes.map((time) => (
-                    <option key={time}>{time}</option>
-                  ))
-                ) : (
-                  <option>No tables available</option>
-                )}
-              </select>
-              {errors.time ? <p>{errors.time.message}</p> : null}
-            </section>
+            <BookingSlots
+              register={register}
+              validation={validationConfig.time}
+              errors={errors}
+              date={watchDate}
+            />
             <section>
               <label htmlFor="guests">
                 Number of guests
