@@ -15,7 +15,6 @@ const BookingForm = ({ submit }) => {
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-
   //react-hook-method to to detect value update
   const watchDate = watch("date", initialDate);
   return (

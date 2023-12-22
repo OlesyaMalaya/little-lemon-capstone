@@ -69,10 +69,10 @@ export const reservationHero = {
 
 export const confirmationHero = {
     heading: "Reservation Confirmed!",
-    subheading: "",
-    description: "Thank you for choosing the Little Lemon restaurant!",
-    cta_link: ROUTES.HOME,
-    cta_text: "GOT IT!",
+    subheading: "Thank you for choosing the Little Lemon restaurant",
+    description: "Our team is dedicated to ensuring that every aspect of your time with us exceeds expectations—from the ambiance to the service and, of course, the culinary journey through the flavors of the Mediterranean.",
+    cta_link: null,
+    cta_text: "",
     image_src: restaurant,
     image_text: "Restaurant view",
 };
