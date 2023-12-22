@@ -1,10 +1,9 @@
 import Hero from "../../components/Hero/Hero";
-import Tiles from "../../components/Tiles/Tiles";
+import TilesView from "../../layouts/TilesView/TilesView";
 import Carousel from "../../components/Carousel/Carousel";
-import { aboutPageHero } from "../../constants/heroes";
-import { infos } from "../../constants/infos";
-import { testimonials } from "../../constants/testimonials";
-
+import { aboutPageHero } from "../../data/heroes";
+import { infos } from "../../data/infos";
+import { testimonials } from "../../data/testimonials";
 
 const AboutPage = () => {
   return (
@@ -20,7 +19,7 @@ const AboutPage = () => {
       </article>
       <article>
         <h3 className="container content-container">Our customers say</h3>
-        <Tiles tiles={testimonials} type="testimonial" />
+        <TilesView tiles={testimonials} type="testimonial" />
       </article>
     </>
   );

@@ -28,7 +28,7 @@ const BookingSlots = ({ register, validation, errors, date }) => {
 
     }, [date])
 
-
+    const areOptionsAvailable = availableTimes && availableTimes.length;
 
     return (
         <section>
@@ -37,8 +37,8 @@ const BookingSlots = ({ register, validation, errors, date }) => {
                 <sup>*</sup>
             </label>
             {isLoading ? null : (<select id="time" {...register("time", validation)}>
-                {availableTimes.length ? <option></option> : null}
-                {availableTimes.length ? (
+                {areOptionsAvailable ? <option></option> : null}
+                {areOptionsAvailable ? (
                     availableTimes.map((time) => (
                         <option key={time}>{time}</option>
                     ))

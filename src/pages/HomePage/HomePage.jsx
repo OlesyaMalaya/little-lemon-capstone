@@ -1,10 +1,10 @@
 import Hero from "../../components/Hero/Hero";
-import { homePageHero } from "../../constants/heroes";
-import { ROUTES } from "../../constants/routes";
+import { homePageHero } from "../../data/heroes";
+import { ROUTES } from "../../data/routes";
 import Button from "../../components/Button/Button";
 import { NavLink } from "react-router-dom";
-import { specials } from "../../constants/dishes";
-import Tiles from "../../components/Tiles/Tiles";
+import { specials } from "../../data/dishes";
+import TilesView from "../../layouts/TilesView/TilesView";
 
 const HomePage = () => {
   return (
@@ -17,7 +17,7 @@ const HomePage = () => {
             <NavLink to={ROUTES.MENU}>Online Menu</NavLink>
           </Button>
         </section>
-        <Tiles tiles={specials} type="dish" />
+        <TilesView tiles={specials} type="dish" />
       </article>
     </>
   );

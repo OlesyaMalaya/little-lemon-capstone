@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero";
-import { loginPageHero } from "../../constants/heroes";
+import { loginPageHero } from "../../data/heroes";
 
 const LoginPage = () => {
   return (

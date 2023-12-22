@@ -1,4 +1,4 @@
-import { NAV_LINKS } from "../../constants/routes";
+import { NAV_LINKS } from "../../data/routes";
 import { useState } from "react";
 import logo from "../../assets/Logo_horizontal.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

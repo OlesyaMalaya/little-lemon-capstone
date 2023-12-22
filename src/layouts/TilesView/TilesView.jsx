@@ -1,6 +1,6 @@
-import DishCard from "../DishCard/DishCard";
-import Testimonial from "../Testimonial/Testimonial";
-const Tiles = ({ tiles, type }) => {
+import DishCard from "../../components/DishCard/DishCard";
+import Testimonial from "../../components/Testimonial/Testimonial";
+const TilesView = ({ tiles, type }) => {
   return (
     <ul className="tilesview container">
       {tiles.map((tile) => (
@@ -16,4 +16,4 @@ const Tiles = ({ tiles, type }) => {
   );
 };
 
-export default Tiles;
+export default TilesView;

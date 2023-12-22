@@ -2,20 +2,20 @@ import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import BookingSlots from "./BookingSlots";
 import styles from "./Form.module.css";
-import { validationConfig } from "../../constants/validation";
+import { validationConfig } from "../../data/validation";
 
 const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 const initialDate = tomorrow.toISOString().slice(0, 10);
 
-const BookingForm = () => {
+const BookingForm = ({ submit }) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-  const submit = (data) => console.log("data: ", data);
+
   //react-hook-method to to detect value update
   const watchDate = watch("date", initialDate);
   return (

@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero";
-import { orderPageHero } from "../../constants/heroes";
+import { orderPageHero } from "../../data/heroes";
 
 const OrderPage = () => {
   return (

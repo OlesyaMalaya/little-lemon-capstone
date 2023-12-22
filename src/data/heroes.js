@@ -71,7 +71,7 @@ export const confirmationHero = {
     heading: "Reservation Confirmed!",
     subheading: "",
     description: "Thank you for choosing the Little Lemon restaurant!",
-    cta_link: ROUTES.RESERVATION,
+    cta_link: ROUTES.HOME,
     cta_text: "GOT IT!",
     image_src: restaurant,
     image_text: "Restaurant view",
