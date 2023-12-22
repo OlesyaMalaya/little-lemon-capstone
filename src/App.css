@@ -191,3 +191,31 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.button {
+  color: #333333;
+  font-size: 1.375rem;
+  font-weight: 700;
+  background-color: #f4ce14;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: all .3s;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: #495e57;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, .5);
+  transform: translateY(-5px);
+  transition: all .3s;
+}
+
+.button:active {
+  background-color: #f4ce14;
+  box-shadow: none;
+  transform: translateY(5px);
+  transition: all .3s;
+}

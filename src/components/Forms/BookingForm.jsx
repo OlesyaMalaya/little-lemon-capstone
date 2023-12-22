@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import Button from "../Button/Button";
 import BookingSlots from "./BookingSlots";
 import styles from "./Form.module.css";
 import { validationConfig } from "../../data/validation";
@@ -97,10 +96,7 @@ const BookingForm = ({ submit }) => {
               />
               {errors.comment ? <p>{errors.comment.message}</p> : null}
             </section>
-
-            <Button>
-              <button>Confirm booking</button>
-            </Button>
+              <button className="button">Confirm booking</button>
           </fieldset>
         </form>
       </article>

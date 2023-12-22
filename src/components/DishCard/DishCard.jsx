@@ -1,5 +1,4 @@
 import styles from "./DishCard.module.css";
-import Button from "../Button/Button";
 
 const DishCard = ({ dish }) => {
   return (
@@ -13,9 +12,7 @@ const DishCard = ({ dish }) => {
           <p>${dish.price}</p>
         </section>
         <p>{dish.description}</p>
-        <Button>
-          <button>Order a delivery</button>
-        </Button>
+        <button className="button">Order a delivery</button>
       </section>
     </article>
   );
