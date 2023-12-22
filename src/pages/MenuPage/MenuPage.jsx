@@ -5,20 +5,8 @@ import {
   beverages,
 } from "../../constants/dishes";
 import Tiles from "../../components/Tiles/Tiles";
-import { ROUTES } from "../../constants/routes";
-import {restaurant} from "../../constants/images";
 import Hero from "../../components/Hero/Hero";
-
-const menuPageHero = {
-  heading: "Enjoy your meal",
-  subheading: "at Little Lemon",
-  description:
-    "Indulge in an exquisite dining experience at Little Lemon - or order online.",
-  cta_link: ROUTES.RESERVATION,
-  cta_text: "Reserve a table",
-  image_src: restaurant,
-  image_text: "Restaurant view",
-};
+import { menuPageHero } from "../../constants/heroes";
 
 const MenuPage = () => {
   return (

@@ -1,21 +1,10 @@
 import Hero from "../../components/Hero/Hero";
+import { homePageHero } from "../../constants/heroes";
 import { ROUTES } from "../../constants/routes";
-import {plate} from "../../constants/images";
 import Button from "../../components/Button/Button";
 import { NavLink } from "react-router-dom";
 import { specials } from "../../constants/dishes";
 import Tiles from "../../components/Tiles/Tiles";
-
-const homePageHero = {
-  heading: "Little Lemon",
-  subheading: "Chicago",
-  description:
-    "We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.",
-  cta_link: ROUTES.RESERVATION,
-  cta_text: "Reserve a table",
-  image_src: plate,
-  image_text: "Food on a plate",
-};
 
 const HomePage = () => {
   return (

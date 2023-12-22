@@ -1,21 +1,11 @@
-import { ROUTES } from "../../constants/routes";
 import Hero from "../../components/Hero/Hero";
 import Tiles from "../../components/Tiles/Tiles";
 import Carousel from "../../components/Carousel/Carousel";
-import { owners1 } from "../../constants/images";
+import { aboutPageHero } from "../../constants/heroes";
 import { infos } from "../../constants/infos";
 import { testimonials } from "../../constants/testimonials";
 
-const aboutPageHero = {
-  heading: "Welcome",
-  subheading: "to Little Lemon",
-  description:
-    " Immerse yourself in the charm of our Mediterranean flavors, handcrafted with love and tradition.",
-  cta_link: ROUTES.RESERVATION,
-  cta_text: "Reserve a table",
-  image_src: owners1,
-  image_text: "Restaurant owners",
-};
+
 const AboutPage = () => {
   return (
     <>
