@@ -1,4 +1,4 @@
-import { fetchFakeAPI } from "../../api/api";
+import { fakeFetchAPI } from "../../api/api";
 import { useState, useEffect } from "react";
 const BookingSlots = ({ register, validation, errors, date }) => {
 
@@ -18,7 +18,7 @@ const BookingSlots = ({ register, validation, errors, date }) => {
         const updateTimes = async () => {
             setLoading(true);
             // get the data from the api
-            const times = await fetchFakeAPI(date);
+            const times = await fakeFetchAPI(date);
             // set state with the result
             setAvailableTimes(times);
             setLoading(false);

@@ -52,15 +52,35 @@ const getTimesByDate = (date) => {
                 reject(new Error('There are no booking slots for this date'));
             }
         },
-            // simulate the response time of a real API call
-            Math.random() * 1000)
+            Math.random() * 1000); // simulate the response time of a real API call
     })
 }
 
 
-export const fetchFakeAPI = async (date) => {
+export const fakeFetchAPI = async (date) => {
     try {
         const result = await getTimesByDate(date);
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const simulateSubmission = (formData) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (formData) {
+                resolve(true); // Simulate successful submission
+            } else {
+                reject(new Error('Form submission failed.'));
+            }
+        }, Math.random() * 1000); // simulate the response time of a real API call
+    });
+};
+
+export const fakeSubmitAPI = async (formData) => {
+    try {
+        const result = await simulateSubmission(formData);
         return result;
     } catch (error) {
         console.log(error);

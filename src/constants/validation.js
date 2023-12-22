@@ -5,7 +5,7 @@ const checkDate = (value) => {
     lastDate.setDate(lastDate.getDate() + 10);
     const isAfterToday = selectedDate > today;
     const isInNextTenDays = selectedDate < lastDate;
-    const errorMessage = isAfterToday ? "We take reservations only for the next 10 days" : "You can't reserve a table earlier than tomorrow";
+    const errorMessage = isAfterToday ? "We take reservations only for the next 10 days" : "We take reservations at least a day in advance";
     return (isAfterToday && isInNextTenDays) || errorMessage;
 }
 
