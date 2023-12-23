@@ -1,5 +1,5 @@
 const checkDate = (value) => {
-    const selectedDate = Date.parse(value.split("-").join(","));
+    const selectedDate = Date.parse(value);
     const today = new Date()
     const lastDate = new Date()
     lastDate.setDate(lastDate.getDate() + 10);

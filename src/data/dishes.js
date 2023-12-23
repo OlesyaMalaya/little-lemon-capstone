@@ -8,7 +8,7 @@ export const dishes = [
         price: 12.99,
         image: greekSalad,
         isSpecials: true,
-        category: "main",
+        category: "Main Course",
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export const dishes = [
         price: 5.99,
         image: bruschetta,
         isSpecials: true,
-        category: "appetizer",
+        category: "Appetizers",
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ export const dishes = [
         price: 7.99,
         image: lemonDessert,
         isSpecials: true,
-        category: "dessert",
+        category: "Desserts",
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ export const dishes = [
         price: 10.99,
         image: pasta,
         isSpecials: false,
-        category: "main",
+        category: "Main Course",
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ export const dishes = [
         price: 13.99,
         image: seabass,
         isSpecials: false,
-        category: "main",
+        category: "Main Course",
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ export const dishes = [
         price: 2.99,
         image: coffee,
         isSpecials: false,
-        category: "beverage",
+        category: "Beverages",
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ export const dishes = [
         price: 2.99,
         image: tea,
         isSpecials: false,
-        category: "beverage",
+        category: "Beverages",
     },
     {
         id: 8,
@@ -71,12 +71,12 @@ export const dishes = [
         price: 1.99,
         image: lemonade,
         isSpecials: false,
-        category: "beverage",
+        category: "Beverages",
     },
 ];
 
 export const specials = dishes.filter((dish) => dish.isSpecials);
-export const mainDishes = dishes.filter((dish) => dish.category === "main");
-export const desserts = dishes.filter((dish) => dish.category === "dessert");
-export const beverages = dishes.filter((dish) => dish.category === "beverage");
-export const appetizers = dishes.filter((dish) => dish.category === "appetizer");
+export const mainDishes = dishes.filter((dish) => dish.category === "Main Course");
+export const desserts = dishes.filter((dish) => dish.category === "Desserts");
+export const beverages = dishes.filter((dish) => dish.category === "Beverages");
+export const appetizers = dishes.filter((dish) => dish.category === "Appetizers");
