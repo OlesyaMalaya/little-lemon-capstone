@@ -14,7 +14,7 @@ const BookingForm = ({ submit }) => {
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-  //react-hook-method to to detect value update
+  //react-hook-form in-built method to detect date value update allows to display available times based on the selected date
   const watchDate = watch("date", initialDate);
   return (
     <>
@@ -96,7 +96,7 @@ const BookingForm = ({ submit }) => {
               />
               {errors.comment ? <p>{errors.comment.message}</p> : null}
             </section>
-              <button className="button">Confirm booking</button>
+            <button className="button">Confirm booking</button>
           </fieldset>
         </form>
       </article>

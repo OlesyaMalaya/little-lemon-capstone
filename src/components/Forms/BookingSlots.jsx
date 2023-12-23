@@ -1,26 +1,17 @@
 import { fakeFetchAPI } from "../../api/api";
 import { useState, useEffect } from "react";
 import Loader from "../Loader/Loader";
-const initialTimes = [
-  "13:00",
-  "14:00",
-  "15:00",
-  "16:00",
-  "17:00",
-  "18:00",
-  "19-00",
-  "20:00",
-  "21:00",
-];
 
 const BookingSlots = ({ register, validation, errors, date }) => {
-  const [availableTimes, setAvailableTimes] = useState(initialTimes);
+  const [availableTimes, setAvailableTimes] = useState(null);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     const updateTimes = async () => {
       setLoading(true);
+      //connecting the component to the list of available reservation times
       const times = await fakeFetchAPI(date);
+      //updating the available times based on the date the user has selected
       setAvailableTimes(times);
       setLoading(false);
     };

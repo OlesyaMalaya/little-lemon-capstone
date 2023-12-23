@@ -7,15 +7,16 @@ import { reservationHero, confirmationHero } from "../../data/heroes";
 import { fakeSubmitAPI } from "../../api/api";
 
 const ReservationPage = () => {
+  //reservation data from form lifted to share across components
   const [reservation, setReservation] = useState(null);
   const [isLoading, setLoading] = useState(false);
+  //gets state from form
   const handleReservation = async (data) => {
     setLoading(true);
     const submitData = await fakeSubmitAPI(data);
     if (submitData) {
       setReservation(data);
     }
-    console.log("data: ", data);
     setLoading(false);
   };
   return (
