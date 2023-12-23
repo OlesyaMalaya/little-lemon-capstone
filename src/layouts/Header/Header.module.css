@@ -26,8 +26,11 @@
     font-weight: 700;
 }
 
-.nav__item a.nav__link_current {
+.nav__item a[aria-current="page"] {
+    background-color: #f4ce14;
     color: #333333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 /* Menu for big screens */
@@ -80,8 +83,4 @@
         text-underline-offset: 0.5rem;
     }
 
-}
-
-a[aria-current="page"] {
-    color: #333333;
 }
