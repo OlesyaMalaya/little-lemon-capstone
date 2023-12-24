@@ -2,10 +2,7 @@ import { useForm } from "react-hook-form";
 import BookingSlots from "./BookingSlots";
 import styles from "./Form.module.css";
 import { validationConfig } from "../../data/validation";
-
-const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-const initialDate = tomorrow.toISOString().slice(0, 10);
+import { initialDate } from "../../data/dates";
 
 const BookingForm = ({ submit }) => {
   const {
@@ -14,8 +11,8 @@ const BookingForm = ({ submit }) => {
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-  //react-hook-form in-built method to detect date value update allows to display available times based on the selected date
-  const watchDate = watch("date", initialDate);
+  //react-hook-form in-built method to detect date value update that allows BookingSlots to display available times based on the selected date (instead of useReducer as the course suggests)
+  const updateTimes = watch("date", initialDate);
   return (
     <>
       <article className={styles.form__container}>
@@ -37,7 +34,7 @@ const BookingForm = ({ submit }) => {
               register={register}
               validation={validationConfig.time}
               errors={errors}
-              date={watchDate}
+              date={updateTimes}
             />
             <section>
               <label htmlFor="guests">

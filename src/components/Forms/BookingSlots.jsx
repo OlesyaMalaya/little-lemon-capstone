@@ -7,7 +7,7 @@ const BookingSlots = ({ register, validation, errors, date }) => {
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    const updateTimes = async () => {
+    const initializeTimes = async () => {
       setLoading(true);
       //connecting the component to the list of available reservation times
       const times = await fakeFetchAPI(date);
@@ -15,7 +15,7 @@ const BookingSlots = ({ register, validation, errors, date }) => {
       setAvailableTimes(times);
       setLoading(false);
     };
-    updateTimes();
+    initializeTimes();
   }, [date]);
 
   const areOptionsAvailable = availableTimes && availableTimes.length;
