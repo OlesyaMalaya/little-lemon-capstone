@@ -1,14 +1,3 @@
-.form__container {
-    margin: 1rem 0;
-    padding: 1rem;
-    padding-bottom: 0;
-    max-width: 37.5rem;
-    background-color: #edefee;
-    color: #333333;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
 .form__body {
     display: flex;
     flex-direction: column;

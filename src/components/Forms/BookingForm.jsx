@@ -3,19 +3,20 @@ import BookingSlots from "./BookingSlots";
 import styles from "./Form.module.css";
 import { validationConfig } from "../../data/validation";
 import { initialDate } from "../../data/dates";
+import Loader from "../Loader/Loader";
 
-const BookingForm = ({ submit }) => {
+const BookingForm = ({ submit, times }) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-  //react-hook-form in-built method to detect date value update that allows BookingSlots to display available times based on the selected date (instead of useReducer as the course suggests)
+  //react-hook-form in-built method to detect date value update that allows BookingSlots to display available times based on the selected date (instead of useReducer lifted up as the course suggests)
   const updateTimes = watch("date", initialDate);
   return (
     <>
-      <article className={styles.form__container}>
+      <article>
         <form noValidate onSubmit={handleSubmit(submit)} name="Book a table">
           <fieldset className={styles.form__body}>
             <section>
@@ -30,12 +31,17 @@ const BookingForm = ({ submit }) => {
               />
               {errors.date ? <p>{errors.date.message}</p> : null}
             </section>
-            <BookingSlots
-              register={register}
-              validation={validationConfig.time}
-              errors={errors}
-              date={updateTimes}
-            />
+            {times ? (
+              <BookingSlots
+                register={register}
+                validation={validationConfig.time}
+                errors={errors}
+                date={updateTimes}
+                times={times}
+              />
+            ) : (
+              <Loader />
+            )}
             <section>
               <label htmlFor="guests">
                 Number of guests

@@ -1,0 +1,23 @@
+.infocontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+@media (max-width: 767px) {
+    .infocontainer {
+        display: block;
+        gap: 0;
+    }
+
+}
+
+.infocontainer>article {
+    margin: 1rem 0;
+    padding: 1rem;
+    max-width: 37.5rem;
+    background-color: #edefee;
+    color: #333333;
+    border-radius: 1rem;
+    overflow: hidden;
+}

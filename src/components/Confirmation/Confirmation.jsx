@@ -1,21 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { convertDate } from "../../utils/convertDate";
 import styles from "./Confirmation.module.css";
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-};
 
-const Confirmation = ({ data }) => {
+const Confirmation = ({ data, handleClick }) => {
   const { name, guests, date, time } = data;
-  const navigate = useNavigate();
-  const refreshPage = () => {
-    navigate(0);
-  };
-  const reservedDate = new Date(date).toLocaleDateString("en-EN", options);
+  const reservedDate = convertDate(date);
 
   return (
     <article className={styles.confirmation}>
@@ -30,7 +20,7 @@ const Confirmation = ({ data }) => {
         We look forward to hosting you for a delightful dining experience. See
         you soon!
       </p>
-      <button className="button" onClick={refreshPage}>
+      <button className="button" onClick={handleClick}>
         OK
       </button>
     </article>

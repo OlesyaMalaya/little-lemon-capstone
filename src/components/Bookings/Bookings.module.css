@@ -1,0 +1,14 @@
+.bookings td,
+.bookings th {
+    border: 1px solid #495e57;
+    border-radius: 1rem;
+    text-align: left;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1.125rem;
+    background-color: #ffffff;
+}
+
+.bookings table {
+    border-spacing: 1rem;
+}
