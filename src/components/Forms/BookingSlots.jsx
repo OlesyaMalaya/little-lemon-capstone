@@ -1,24 +1,9 @@
-import { useState, useEffect } from "react";
-import Loader from "../Loader/Loader";
+import { updateTimes } from "../../utils/updateTimes";
 
 const BookingSlots = ({ register, validation, errors, date, times }) => {
-  const [availableTimes, setAvailableTimes] = useState(null);
-  const [isLoading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const updateTimes = () => {
-      setLoading(true);
-      const updatedTimes = times
-        .filter((timeSlots) => timeSlots.day === date)
-        .map((dateData) => dateData.bookingSlots);
-      //updating the available times based on the date the user has selected
-      setAvailableTimes(updatedTimes[0]);
-      setLoading(false);
-    };
-    updateTimes();
-  }, [date, times]);
-
-  const areOptionsAvailable = availableTimes && availableTimes.length;
+  //instead of useReducer I use the built-in react-hook-form method in the BookingForm component and pass date and times as props to avoid re-rendering of the BookingForm component after each action
+  const availableTimes = updateTimes(date, times);
+  const areOptionsAvailable = availableTimes.length;
 
   return (
     <section>
@@ -26,18 +11,14 @@ const BookingSlots = ({ register, validation, errors, date, times }) => {
         Choose time
         <sup>*</sup>
       </label>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <select id="time" {...register("time", validation)}>
-          {areOptionsAvailable ? <option></option> : null}
-          {areOptionsAvailable ? (
-            availableTimes.map((time) => <option key={time}>{time}</option>)
-          ) : (
-            <option>No tables available</option>
-          )}
-        </select>
-      )}
+      <select id="time" {...register("time", validation)}>
+        {areOptionsAvailable ? <option></option> : null}
+        {areOptionsAvailable ? (
+          availableTimes.map((time) => <option key={time}>{time}</option>)
+        ) : (
+          <option>No tables available</option>
+        )}
+      </select>
       {errors.time ? <p>{errors.time.message}</p> : null}
     </section>
   );
