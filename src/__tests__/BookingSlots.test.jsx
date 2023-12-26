@@ -1,18 +1,15 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import BookingForm from "../components/Forms/BookingForm";
 import { initialDate, mockDate } from "../data/dates";
+import { mockTimeSlotsbyDays } from "../data/mocks";
 import * as services from "../utils/updateTimes";
 
 const mockSubmit = jest.fn();
-const mockTimes = [
-  { day: initialDate, bookingSlots: ["12:00", "13:00"] },
-  { day: mockDate, bookingSlots: ["14:00", "15:00"] },
-];
 
 describe("BookingSlots", () => {
   test("Time options are updated when the user picks a new date in BookingForm", () => {
     const mockUpdateTimes = jest.spyOn(services, "updateTimes");
-    render(<BookingForm submit={mockSubmit} times={mockTimes} />);
+    render(<BookingForm submit={mockSubmit} times={mockTimeSlotsbyDays} />);
     //available times are filtered according to initial date (set for tomorrow)
     expect(mockUpdateTimes).toHaveBeenCalledWith(
       initialDate,
