@@ -2,7 +2,7 @@ import BookingForm from "../../components/Forms/BookingForm";
 import Loader from "../../components/Loader/Loader";
 import { useState, useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
-import Confirmation from "../../components/Confirmation/Confirmation";
+import ConfirmedBooking from "../../components/ConfirmedBooking/ConfirmedBooking";
 import { reservationHero, confirmationHero } from "../../data/heroes";
 import { fakeFetchAPI, fakeSubmitAPI } from "../../api/api";
 import Bookings from "../../components/Bookings/Bookings";
@@ -33,6 +33,7 @@ const ReservationPage = () => {
       setAvailableTimes((availableTimes) =>
         updateBookings(availableTimes, data.date, data.time)
       );
+      console.log(data);
     }
     setLoading(false);
   };
@@ -46,11 +47,14 @@ const ReservationPage = () => {
         {isLoading ? (
           <Loader />
         ) : reservation ? (
-          <Confirmation data={reservation} handleClick={handleConfirmation} />
+          <ConfirmedBooking
+            data={reservation}
+            handleClick={handleConfirmation}
+          />
         ) : (
           <section className={styles.infocontainer}>
             <BookingForm submit={handleReservation} times={availableTimes} />
-            <Bookings timeslots={availableTimes} />
+            <Bookings bookingData={availableTimes} />
           </section>
         )}
       </section>
