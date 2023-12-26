@@ -1,9 +1,9 @@
 import styles from "./Bookings.module.css";
 import { convertDate } from "../../utils/convertDate";
-const Bookings = ({ timeslots }) => {
+const Bookings = ({ bookingData }) => {
   return (
     <>
-      {timeslots ? (
+      {bookingData ? (
         <article className={styles.bookings}>
           <h3>Tables available at the moment</h3>
           <table>
@@ -18,7 +18,7 @@ const Bookings = ({ timeslots }) => {
               </tr>
             </thead>
             <tbody>
-              {timeslots.map((timeslot) => (
+              {bookingData.map((timeslot) => (
                 <tr key={timeslot.day}>
                   <td>{convertDate(timeslot.day)}</td>
                   <td>
