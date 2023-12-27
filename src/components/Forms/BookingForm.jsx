@@ -17,7 +17,12 @@ const BookingForm = ({ submit, times }) => {
   return (
     <>
       <article>
-        <form noValidate onSubmit={handleSubmit(submit)} name="Book a table">
+        <form
+          noValidate
+          autoComplete="on"
+          onSubmit={handleSubmit(submit)}
+          name="Book a table"
+        >
           <fieldset className={styles.form__body}>
             <section>
               <label htmlFor="date">
@@ -72,6 +77,7 @@ const BookingForm = ({ submit, times }) => {
                 type="text"
                 id="name"
                 placeholder="Name"
+                autoComplete="given-name"
                 {...register("name", validationConfig.name)}
               />
               {errors.name ? <p>{errors.name.message}</p> : null}
@@ -85,6 +91,7 @@ const BookingForm = ({ submit, times }) => {
                 type="email"
                 id="email"
                 placeholder="email@email.com"
+                autoComplete="email"
                 {...register("email", validationConfig.email)}
               />
               {errors.email ? <p>{errors.email.message}</p> : null}
@@ -99,7 +106,9 @@ const BookingForm = ({ submit, times }) => {
               />
               {errors.comment ? <p>{errors.comment.message}</p> : null}
             </section>
-            <button className="button">Confirm booking</button>
+            <button type="submit" className="button">
+              Confirm booking
+            </button>
           </fieldset>
         </form>
       </article>
