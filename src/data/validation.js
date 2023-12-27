@@ -11,17 +11,17 @@ const checkDate = (value) => {
 
 export const validationConfig = {
     date: {
-        required: "Date is required",
+        required: "Date is required to book a table",
         validate: checkDate,
     },
     time: {
-        required: "Time is required",
+        required: "Time is required to book a table",
         validate: (value) =>
             value !== "No tables available" ||
-            "Sorry, all the tables for this time are booked. Please, choose another date",
+            "All the tables for this day are booked. Please choose another date",
     },
     guests: {
-        required: "Number is required",
+        required: "Number of guests is required to book a table",
         min: {
             value: 1,
             message: "Minimum number of guests needed to reserve a table is 1",
@@ -31,9 +31,9 @@ export const validationConfig = {
             message: "Maximum number of guests we can host at a time is 10",
         },
     },
-    name: { required: "Name is required" },
+    name: { required: "Name is required to book a table" },
     email: {
-        required: "Email is required",
+        required: "Email is required to book a table",
         pattern: {
             value:
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
