@@ -9,6 +9,10 @@
     color: #ff0000;
 }
 
+.form__body p {
+    padding-top: 0.3rem;
+}
+
 .form__body label {
     font-weight: 700;
     font-size: 1.125rem;
