@@ -1,3 +1,4 @@
+import { createDate } from "./createDate";
 //booking slots at the Little Lemon
 const availableTimes = [
     "13:00",
@@ -27,15 +28,13 @@ const getRandomAvailableTimes = () => {
 }
 //returns an object with data that should come from server but don't 
 export const createFakeData = () => {
-    //creates an array with next ten dates
+    //creates an array with the next ten dates
     const dates = Array.from({ length: 10 }, (_, v) => {
-        const date = new Date();
         const n = v + 1;
-        date.setDate(date.getDate() + n);
-        //converts the format of the date to match datepicker from the form
-        return date.toISOString().slice(0, 10);
+        const date = createDate(n, "future");
+        return date;
     });
-    //returns an object with next ten days and randomly chosen available times
+    //returns an object with the next ten days and randomly chosen available times
     const fakeData = dates.map((date) => ({ day: date, bookingSlots: getRandomAvailableTimes() }));
     return fakeData;
 }
