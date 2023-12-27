@@ -1,7 +1,13 @@
-const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-export const initialDate = tomorrow.toISOString().slice(0, 10);
+import { createDate } from "../utils/createDate";
 
-const date = new Date();
-date.setDate(date.getDate() + 4);
-export const mockDate = date.toISOString().slice(0, 10);
+
+export const initialDate = createDate(1, "future");
+export const mockDate = createDate(4, "future");
+export const mockSecondDate = createDate(6, "future");
+export const mockLateDate = createDate(20, "future");
+export const mockEarlyDate = createDate(7, "past");
+
+
+
+
+
