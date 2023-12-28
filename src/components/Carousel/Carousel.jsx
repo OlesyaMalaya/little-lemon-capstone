@@ -24,6 +24,7 @@ const Carousel = ({ infos }) => {
           <img
             src={infos[prevInfoIndex].image}
             alt={infos[prevInfoIndex].alt}
+            aria-label="On Click"
           />
         </div>
         <p>{infos[activeInfoIndex].text}</p>
@@ -31,6 +32,7 @@ const Carousel = ({ infos }) => {
           <img
             src={infos[nextInfoIndex].image}
             alt={infos[nextInfoIndex].alt}
+            aria-label="On Click"
           />
         </div>
       </section>
@@ -42,6 +44,7 @@ const Carousel = ({ infos }) => {
               info.id === infos[activeInfoIndex].id ? styles.active_dot : ""
             }
             onClick={() => handleDotClick(info)}
+            aria-label="On Click"
           >
             <span className={styles.carousel_dot}></span>
           </li>
