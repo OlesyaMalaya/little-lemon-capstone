@@ -106,7 +106,7 @@ const BookingForm = ({ submit, times }) => {
               />
               {errors.comment ? <p>{errors.comment.message}</p> : null}
             </section>
-            <button type="submit" className="button">
+            <button type="submit" className="button" aria-label="On Click">
               Confirm booking
             </button>
           </fieldset>

@@ -12,7 +12,7 @@ const HomePage = () => {
       <article>
         <section className="container flex content-container">
           <h3>This Week Specials!</h3>
-          <NavLink className="button" to={ROUTES.MENU}>
+          <NavLink className="button" to={ROUTES.MENU} aria-label="On Click">
             Online Menu
           </NavLink>
         </section>

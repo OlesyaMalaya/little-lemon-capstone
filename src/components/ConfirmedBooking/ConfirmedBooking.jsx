@@ -11,6 +11,7 @@ const ConfirmedBooking = ({ data, handleClick }) => {
     <article className={styles.confirmation}>
       <h3>Your reservation has been confirmed</h3>
       <FontAwesomeIcon
+        //Font Awesome includes Auto-Accessibility feature that handles rendering the right technical syntax to make icons accessibile
         icon={faCircleCheck}
         className={styles.confirmation__icon}
       />
@@ -20,7 +21,7 @@ const ConfirmedBooking = ({ data, handleClick }) => {
         We look forward to hosting you for a delightful dining experience. See
         you soon!
       </p>
-      <button className="button" onClick={handleClick}>
+      <button className="button" onClick={handleClick} aria-label="On Click">
         OK
       </button>
     </article>

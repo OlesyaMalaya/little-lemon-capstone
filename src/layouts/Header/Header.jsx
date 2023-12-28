@@ -1,6 +1,7 @@
 import { NAV_LINKS } from "../../data/routes";
 import { useState } from "react";
 import logo from "../../assets/Logo_horizontal.svg";
+//Font Awesome includes Auto-Accessibility feature that handles rendering the right technical syntax to make icons accessibile
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
@@ -31,6 +32,7 @@ const Header = () => {
                   key={navlink.link}
                   className={styles.nav__item}
                   onClick={toggleMenu}
+                  aria-label="On Click"
                 >
                   <NavLink to={navlink.link}>{navlink.name}</NavLink>
                 </li>
@@ -38,7 +40,11 @@ const Header = () => {
             })}
           </ul>
         </nav>
-        <div className={styles.header__burger} onClick={toggleMenu}>
+        <div
+          className={styles.header__burger}
+          onClick={toggleMenu}
+          aria-label="On Click"
+        >
           {isMenuVisible ? (
             <FontAwesomeIcon icon={faXmark} size="2xl" />
           ) : (

@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
 import footerLogo from "../../assets/footer-logo.png";
 import { Link } from "react-router-dom";
+//Font Awesome includes Auto-Accessibility feature that handles rendering the right technical syntax to make icons accessibile
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTelegram,

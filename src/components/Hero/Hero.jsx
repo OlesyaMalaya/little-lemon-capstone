@@ -12,7 +12,11 @@ const Hero = ({ hero }) => {
           </div>
           <p>{hero.description}</p>
           {hero.cta_text ? (
-            <NavLink className="button" to={hero.cta_link}>
+            <NavLink
+              className="button"
+              to={hero.cta_link}
+              aria-label="On Click"
+            >
               {hero.cta_text}
             </NavLink>
           ) : null}

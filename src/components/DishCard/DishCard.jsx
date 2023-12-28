@@ -12,7 +12,9 @@ const DishCard = ({ dish }) => {
           <p>${dish.price}</p>
         </section>
         <p>{dish.description}</p>
-        <button className="button">Order a delivery</button>
+        <button className="button" aria-label="On Click">
+          Order a delivery
+        </button>
       </section>
     </article>
   );
