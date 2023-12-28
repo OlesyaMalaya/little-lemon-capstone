@@ -1,4 +1,6 @@
 import styles from "./DishCard.module.css";
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "../../data/routes";
 
 const DishCard = ({ dish }) => {
   return (
@@ -12,9 +14,11 @@ const DishCard = ({ dish }) => {
           <p>${dish.price}</p>
         </section>
         <p>{dish.description}</p>
-        <button className="button" aria-label="On Click">
-          Order a delivery
-        </button>
+        <NavLink to={ROUTES.ORDER}>
+          <button className="button" aria-label="On Click">
+            Order a delivery
+          </button>
+        </NavLink>
       </section>
     </article>
   );
