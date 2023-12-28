@@ -35,11 +35,8 @@ This repository contains the final capstone project developed as part of the **M
 ## How to Install and Run the Project
 
 Clone the repository: git clone https://github.com/OlesyaMalaya/little-lemon-capstone.git
-
 Install dependencies: npm install
-
 Run the development server: npm start
-
 Run unit tests: npm test
 
 ## Project Structure
@@ -93,7 +90,7 @@ The directory tree (excluding "node modules", "public" and pictures in the asset
 |           Testimonial.jsx
 |           Testimonial.module.css
 |
-+---_data_
++---data
 |       dates.js
 |       dishes.js
 |       heroes.js
