@@ -16,6 +16,8 @@
 
 This repository contains the final capstone project developed as part of the **Meta Front-End Developer Certification**. Little Lemon Restaurant is a responsive single-page application featuring various sections such as Home, About, Menu, Reservation, Login, and Order Online. The project aims to showcase front-end development skills, implementing functionality per the Meta course requirements, employing industry-standard tools and libraries and incorporating design elements provided by the Meta course (pictures, a style guide, and a design for the homepage in the mobile version in Figma). There were no code snippets provided by the Meta course, reinforcing the independent realization of the supplied design elements and requirements.
 
+- Please preview the project HERE: https://frontend-showcase-restaurant.vercel.app/
+
 ## Pages
 
 - **Home Page**: Includes an advertisement hero and specials promotions.
